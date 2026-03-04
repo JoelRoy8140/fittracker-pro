@@ -1,5 +1,5 @@
 # web_app/app.py
-# Version: 1.0.2 - Deployment Sync
+# Version: 1.0.5 - Clean State Force Push
 """
 FitTracker Pro – main Streamlit application.
 """
