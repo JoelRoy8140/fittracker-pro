@@ -1,4 +1,5 @@
 # web_app/app.py
+# Version: 1.0.2 - Deployment Sync
 """
 FitTracker Pro – main Streamlit application.
 """
