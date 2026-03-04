@@ -2,6 +2,15 @@
 """
 FitTracker Pro – main Streamlit application.
 """
+import sys
+import os
+
+# ── Fix for Streamlit Cloud path handling ────────────────────────────────────
+# Ensure the project root is in sys.path
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if root_path not in sys.path:
+    sys.path.insert(0, root_path)
+
 import streamlit as st
 import pandas as pd
 from datetime import datetime
