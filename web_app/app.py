@@ -1,5 +1,5 @@
 # web_app/app.py
-# Version: 1.0.5 - Clean State Force Push
+# Version: 1.0.6 - Python 3.13 Fix + Cache Overwrite
 """
 FitTracker Pro – main Streamlit application.
 """
