@@ -1,0 +1,164 @@
+[
+  {
+    "id": "jaw_release",
+    "name": "Jaw Release",
+    "target": "Jawline & Under-chin",
+    "fat_score_min": 0,
+    "fat_score_max": 100,
+    "duration": "2 minutes",
+    "reps": "30 reps",
+    "instructions": [
+      "Close your mouth and move your jaw as if you are chewing gum.",
+      "Breathe in deeply through your nose, then slowly breathe out while humming.",
+      "Open your mouth wide with your tongue pressed against your lower teeth.",
+      "Hold for 5 seconds. Relax and repeat."
+    ],
+    "benefits": "Tones jawline, reduces double chin, stretches facial and neck muscles.",
+    "category": "Jawline"
+  },
+  {
+    "id": "fish_face",
+    "name": "Fish Face",
+    "target": "Cheeks & Cheekbones",
+    "fat_score_min": 0,
+    "fat_score_max": 100,
+    "duration": "1 minute",
+    "reps": "20 reps",
+    "instructions": [
+      "Suck in your cheeks and lips to make a fish-face expression.",
+      "Try to smile while holding this position.",
+      "Hold for 5 seconds, then relax."
+    ],
+    "benefits": "Tones and stretches cheek muscles, reduces chubby cheeks.",
+    "category": "Cheeks"
+  },
+  {
+    "id": "cheek_puffs",
+    "name": "Cheek Puffs",
+    "target": "Cheeks",
+    "fat_score_min": 30,
+    "fat_score_max": 100,
+    "duration": "1 minute",
+    "reps": "15 reps each side",
+    "instructions": [
+      "Inhale deeply and fill your mouth with air.",
+      "Transfer the air from one cheek to the other alternately.",
+      "Hold for 5 seconds on each side, then exhale slowly."
+    ],
+    "benefits": "Tones cheek muscles and reduces puffiness.",
+    "category": "Cheeks"
+  },
+  {
+    "id": "neck_roll",
+    "name": "Neck Roll",
+    "target": "Neck & Under-chin",
+    "fat_score_min": 0,
+    "fat_score_max": 100,
+    "duration": "2 minutes",
+    "reps": "5 rotations each direction",
+    "instructions": [
+      "Sit straight and tilt your head to the right side.",
+      "Slowly roll your head down to the front, then to the left.",
+      "Continue rolling in a full circle. Repeat in the opposite direction.",
+      "Keep your shoulders relaxed and down."
+    ],
+    "benefits": "Tones neck and chin area, improves posture, reduces double chin.",
+    "category": "Neck"
+  },
+  {
+    "id": "chin_lift",
+    "name": "Chin Lift",
+    "target": "Under-chin/Double Chin",
+    "fat_score_min": 40,
+    "fat_score_max": 100,
+    "duration": "1 minute",
+    "reps": "15 reps",
+    "instructions": [
+      "Tilt your head back to look up at the ceiling.",
+      "Pucker up your lips as if you are going to kiss the ceiling.",
+      "Hold for 5 seconds, then relax."
+    ],
+    "benefits": "Specifically targets double chin and neck fat.",
+    "category": "Chin"
+  },
+  {
+    "id": "forehead_smoother",
+    "name": "Forehead Smoother",
+    "target": "Forehead & Upper Face",
+    "fat_score_min": 0,
+    "fat_score_max": 100,
+    "duration": "1 minute",
+    "reps": "10 reps",
+    "instructions": [
+      "Place both hands on your forehead with fingers spread out.",
+      "Slowly sweep your fingers outward across your forehead applying gentle pressure.",
+      "Relax and repeat."
+    ],
+    "benefits": "Tones upper facial muscles and reduces forehead tension.",
+    "category": "Forehead"
+  },
+  {
+    "id": "eyebrow_raise",
+    "name": "Eyebrow Raiser",
+    "target": "Brow & Upper Eyelid",
+    "fat_score_min": 0,
+    "fat_score_max": 100,
+    "duration": "1 minute",
+    "reps": "20 reps",
+    "instructions": [
+      "Open your eyes wide, raising your eyebrows as high as possible.",
+      "Hold for 5 seconds, then slowly lower your brows.",
+      "Repeat while maintaining a relaxed face."
+    ],
+    "benefits": "Tones brow and forehead area, creates a more alert appearance.",
+    "category": "Eyes"
+  },
+  {
+    "id": "mouthwash_exercise",
+    "name": "Mouthwash Exercise",
+    "target": "Cheeks & Jaw",
+    "fat_score_min": 30,
+    "fat_score_max": 100,
+    "duration": "2 minutes",
+    "reps": "3 sets of 30 seconds",
+    "instructions": [
+      "Fill your mouth with air.",
+      "Transfer the air under your upper lip, then your left cheek, then your lower lip, then your right cheek.",
+      "Continue rotating for 30 seconds then exhale."
+    ],
+    "benefits": "Works all cheek muscles simultaneously, very effective for reducing cheek fat.",
+    "category": "Cheeks"
+  },
+  {
+    "id": "tongue_stretch",
+    "name": "Tongue Stretch",
+    "target": "Under-chin & Neck",
+    "fat_score_min": 50,
+    "fat_score_max": 100,
+    "duration": "1 minute",
+    "reps": "10 reps",
+    "instructions": [
+      "Look straight ahead and stick your tongue out as far as possible.",
+      "Lift your tongue upward toward your nose.",
+      "Hold for 10 seconds, then relax."
+    ],
+    "benefits": "Tones neck and chin muscles, directly targets double chin.",
+    "category": "Chin"
+  },
+  {
+    "id": "smile_smoother",
+    "name": "Smile Smoother",
+    "target": "Nasolabial Folds & Cheeks",
+    "fat_score_min": 0,
+    "fat_score_max": 100,
+    "duration": "1 minute",
+    "reps": "15 reps",
+    "instructions": [
+      "Hide your teeth with your lips and make an O shape.",
+      "Smile as wide as you can while keeping the O shape, then hold for 5 seconds.",
+      "Place your index finger on your chin and move your jaw up and down gently."
+    ],
+    "benefits": "Lifts cheek muscles and tones nasolabial area.",
+    "category": "Cheeks"
+  }
+]

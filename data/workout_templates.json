@@ -1,0 +1,195 @@
+[
+    {
+        "id": 1,
+        "name": "Beginner Full Body",
+        "description": "A great starting point for beginners. No equipment needed.",
+        "goal": "Full Body",
+        "exercises": [
+            {
+                "name": "Jumping Jacks",
+                "sets": 3,
+                "reps": "30 sec",
+                "rest": 30,
+                "duration_minutes": 3,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Cardio"
+            },
+            {
+                "name": "Bodyweight Squats",
+                "sets": 3,
+                "reps": 12,
+                "rest": 60,
+                "duration_minutes": 5,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Legs"
+            },
+            {
+                "name": "Push-ups (Knees if needed)",
+                "sets": 3,
+                "reps": 10,
+                "rest": 60,
+                "duration_minutes": 5,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Chest"
+            },
+            {
+                "name": "Plank",
+                "sets": 3,
+                "reps": "30 sec",
+                "rest": 45,
+                "duration_minutes": 4,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Core"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Dumbbell Strength Builder",
+        "description": "Intermediate routine focusing on hypertrophy using dumbbells.",
+        "goal": "Strength",
+        "exercises": [
+            {
+                "name": "Goblet Squats",
+                "sets": 4,
+                "reps": 10,
+                "rest": 90,
+                "duration_minutes": 8,
+                "required_equipment": ["Dumbbells"],
+                "muscle_group": "Legs"
+            },
+            {
+                "name": "Dumbbell Flat Press",
+                "sets": 4,
+                "reps": 8,
+                "rest": 90,
+                "duration_minutes": 8,
+                "required_equipment": ["Dumbbells", "Bench"],
+                "muscle_group": "Chest"
+            },
+            {
+                "name": "One-Arm Dumbbell Row",
+                "sets": 3,
+                "reps": 10,
+                "rest": 60,
+                "duration_minutes": 6,
+                "required_equipment": ["Dumbbells"],
+                "muscle_group": "Back"
+            },
+            {
+                "name": "Dumbbell Overhead Press",
+                "sets": 3,
+                "reps": 10,
+                "rest": 60,
+                "duration_minutes": 6,
+                "required_equipment": ["Dumbbells"],
+                "muscle_group": "Shoulders"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Quick HIIT Core",
+        "description": "High intensity interval training focusing on the core, done in ~15 mins.",
+        "goal": "Endurance",
+        "exercises": [
+            {
+                "name": "Mountain Climbers",
+                "sets": 4,
+                "reps": "40 sec",
+                "rest": 20,
+                "duration_minutes": 4,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Core"
+            },
+            {
+                "name": "Bicycle Crunches",
+                "sets": 4,
+                "reps": "40 sec",
+                "rest": 20,
+                "duration_minutes": 4,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Core"
+            },
+            {
+                "name": "Burpees",
+                "sets": 4,
+                "reps": "30 sec",
+                "rest": 30,
+                "duration_minutes": 5,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Full Body"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Lower Body Power",
+        "description": "Leg focused routine. Good for athletic power.",
+        "goal": "Hypertrophy",
+        "exercises": [
+            {
+                "name": "Squat Jumps",
+                "sets": 3,
+                "reps": 15,
+                "rest": 60,
+                "duration_minutes": 5,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Legs"
+            },
+            {
+                "name": "Walking Lunges",
+                "sets": 3,
+                "reps": "12 per leg",
+                "rest": 60,
+                "duration_minutes": 6,
+                "required_equipment": ["Bodyweight", "Dumbbells"],
+                "muscle_group": "Legs"
+            },
+            {
+                "name": "Glute Bridges",
+                "sets": 3,
+                "reps": 15,
+                "rest": 45,
+                "duration_minutes": 4,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Glutes"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Daily Mobility Flow",
+        "description": "Light stretching and mobility for recovery days.",
+        "goal": "Mobility",
+        "exercises": [
+            {
+                "name": "Cat-Cow Stretch",
+                "sets": 2,
+                "reps": "10 times",
+                "rest": 0,
+                "duration_minutes": 3,
+                "required_equipment": ["Bodyweight", "Mat"],
+                "muscle_group": "Spine"
+            },
+            {
+                "name": "World's Greatest Stretch",
+                "sets": 2,
+                "reps": "5 per side",
+                "rest": 0,
+                "duration_minutes": 4,
+                "required_equipment": ["Bodyweight"],
+                "muscle_group": "Full Body"
+            },
+            {
+                "name": "Child's Pose",
+                "sets": 1,
+                "reps": "60 sec hold",
+                "rest": 0,
+                "duration_minutes": 2,
+                "required_equipment": ["Bodyweight", "Mat"],
+                "muscle_group": "Back"
+            }
+        ]
+    }
+]

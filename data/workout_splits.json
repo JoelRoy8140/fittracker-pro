@@ -1,0 +1,138 @@
+{
+  "splits": {
+    "Push/Pull/Legs": {
+      "days": {
+        "Push Day": {
+          "muscle_groups": ["Chest", "Shoulders", "Triceps"],
+          "description": "Focus on pushing movements"
+        },
+        "Pull Day": {
+          "muscle_groups": ["Back", "Biceps", "Rear Delts"],
+          "description": "Focus on pulling movements"
+        },
+        "Legs Day": {
+          "muscle_groups": ["Quads", "Hamstrings", "Glutes", "Calves"],
+          "description": "Full leg development"
+        }
+      }
+    },
+    "Upper/Lower": {
+      "days": {
+        "Upper Body A": {
+          "muscle_groups": ["Chest", "Back", "Shoulders", "Arms"],
+          "description": "Strength focus - upper body"
+        },
+        "Lower Body A": {
+          "muscle_groups": ["Quads", "Hamstrings", "Glutes", "Calves"],
+          "description": "Strength focus - lower body"
+        },
+        "Upper Body B": {
+          "muscle_groups": ["Chest", "Back", "Shoulders", "Arms"],
+          "description": "Hypertrophy focus - upper body"
+        },
+        "Lower Body B": {
+          "muscle_groups": ["Quads", "Hamstrings", "Glutes", "Calves"],
+          "description": "Hypertrophy focus - lower body"
+        }
+      }
+    },
+    "Bro Split": {
+      "days": {
+        "Chest Day": { "muscle_groups": ["Chest", "Triceps"], "description": "Chest and triceps" },
+        "Back Day": { "muscle_groups": ["Back", "Biceps"], "description": "Back and biceps" },
+        "Shoulders Day": { "muscle_groups": ["Shoulders", "Traps"], "description": "Shoulder development" },
+        "Arms Day": { "muscle_groups": ["Biceps", "Triceps", "Forearms"], "description": "Full arm development" },
+        "Legs Day": { "muscle_groups": ["Quads", "Hamstrings", "Glutes", "Calves"], "description": "Full legs" }
+      }
+    },
+    "Full Body": {
+      "days": {
+        "Full Body A": { "muscle_groups": ["Chest", "Back", "Legs", "Shoulders", "Core"], "description": "Full body strength" },
+        "Full Body B": { "muscle_groups": ["Chest", "Back", "Legs", "Arms", "Core"], "description": "Full body hypertrophy" },
+        "Full Body C": { "muscle_groups": ["Chest", "Back", "Legs", "Shoulders", "Arms"], "description": "Full body power" }
+      }
+    }
+  },
+  "exercises_by_muscle": {
+    "Chest": [
+      {"name": "Push-ups", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Bodyweight"]},
+      {"name": "Dumbbell Flat Press", "sets": 4, "reps": "8-12", "rest": 90, "required_equipment": ["Dumbbells", "Bench"]},
+      {"name": "Incline Dumbbell Press", "sets": 3, "reps": "10-12", "rest": 90, "required_equipment": ["Dumbbells", "Bench"]},
+      {"name": "Cable Flyes", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Cable Machine"]},
+      {"name": "Dips", "sets": 3, "reps": "10-12", "rest": 90, "required_equipment": ["Dip Station"]}
+    ],
+    "Back": [
+      {"name": "Pull-ups", "sets": 3, "reps": "6-10", "rest": 90, "required_equipment": ["Pull-up Bar"]},
+      {"name": "One-Arm Dumbbell Row", "sets": 4, "reps": "10-12", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Lat Pulldowns", "sets": 3, "reps": "10-12", "rest": 90, "required_equipment": ["Cable Machine"]},
+      {"name": "Inverted Row", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Bodyweight", "Barbell"]},
+      {"name": "Seated Cable Row", "sets": 3, "reps": "10-12", "rest": 90, "required_equipment": ["Cable Machine"]}
+    ],
+    "Shoulders": [
+      {"name": "Dumbbell Overhead Press", "sets": 4, "reps": "8-12", "rest": 90, "required_equipment": ["Dumbbells"]},
+      {"name": "Lateral Raises", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Front Raises", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Face Pulls", "sets": 3, "reps": "15-20", "rest": 60, "required_equipment": ["Cable Machine"]},
+      {"name": "Arnold Press", "sets": 3, "reps": "10-12", "rest": 90, "required_equipment": ["Dumbbells"]}
+    ],
+    "Triceps": [
+      {"name": "Tricep Pushdowns", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Cable Machine"]},
+      {"name": "Overhead Tricep Extension", "sets": 3, "reps": "10-12", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Tricep Dips", "sets": 3, "reps": "10-12", "rest": 90, "required_equipment": ["Dip Station"]},
+      {"name": "Diamond Push-ups", "sets": 3, "reps": "10-15", "rest": 60, "required_equipment": ["Bodyweight"]}
+    ],
+    "Biceps": [
+      {"name": "Dumbbell Curls", "sets": 3, "reps": "10-12", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Hammer Curls", "sets": 3, "reps": "10-12", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Concentration Curls", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Cable Curls", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Cable Machine"]}
+    ],
+    "Quads": [
+      {"name": "Bodyweight Squats", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Bodyweight"]},
+      {"name": "Goblet Squats", "sets": 4, "reps": "10-12", "rest": 90, "required_equipment": ["Dumbbells"]},
+      {"name": "Leg Press", "sets": 4, "reps": "10-15", "rest": 90, "required_equipment": ["Leg Press Machine"]},
+      {"name": "Lunges", "sets": 3, "reps": "10 per leg", "rest": 60, "required_equipment": ["Bodyweight"]}
+    ],
+    "Hamstrings": [
+      {"name": "Deadlifts", "sets": 4, "reps": "6-8", "rest": 120, "required_equipment": ["Barbell"]},
+      {"name": "Romanian Deadlift", "sets": 4, "reps": "8-10", "rest": 90, "required_equipment": ["Dumbbells"]},
+      {"name": "Leg Curls", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Leg Curl Machine"]},
+      {"name": "Glute-Ham Raises", "sets": 3, "reps": "8-10", "rest": 90, "required_equipment": ["GHD Machine"]}
+    ],
+    "Glutes": [
+      {"name": "Glute Bridges", "sets": 3, "reps": "15-20", "rest": 60, "required_equipment": ["Bodyweight"]},
+      {"name": "Hip Thrusts", "sets": 4, "reps": "10-12", "rest": 90, "required_equipment": ["Barbell", "Bench"]},
+      {"name": "Cable Kickbacks", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Cable Machine"]},
+      {"name": "Walking Lunges", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Bodyweight"]}
+    ],
+    "Calves": [
+      {"name": "Standing Calf Raises", "sets": 4, "reps": "15-20", "rest": 45, "required_equipment": ["Bodyweight"]},
+      {"name": "Seated Calf Raises", "sets": 3, "reps": "15-20", "rest": 45, "required_equipment": ["Dumbbells"]}
+    ],
+    "Core": [
+      {"name": "Plank", "sets": 3, "reps": "30-60 sec", "rest": 30, "required_equipment": ["Bodyweight"]},
+      {"name": "Crunches", "sets": 3, "reps": "15-20", "rest": 30, "required_equipment": ["Bodyweight"]},
+      {"name": "Bicycle Crunches", "sets": 3, "reps": "20-30", "rest": 30, "required_equipment": ["Bodyweight"]},
+      {"name": "Russian Twists", "sets": 3, "reps": "20-30", "rest": 30, "required_equipment": ["Bodyweight"]},
+      {"name": "Mountain Climbers", "sets": 3, "reps": "30 sec", "rest": 30, "required_equipment": ["Bodyweight"]}
+    ],
+    "Arms": [
+      {"name": "Dumbbell Curls", "sets": 3, "reps": "10-12", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Overhead Tricep Extension", "sets": 3, "reps": "10-12", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Hammer Curls", "sets": 3, "reps": "10-12", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Diamond Push-ups", "sets": 3, "reps": "10-15", "rest": 60, "required_equipment": ["Bodyweight"]}
+    ],
+    "Traps": [
+      {"name": "Dumbbell Shrugs", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Face Pulls", "sets": 3, "reps": "15-20", "rest": 60, "required_equipment": ["Cable Machine"]}
+    ],
+    "Rear Delts": [
+      {"name": "Reverse Flyes", "sets": 3, "reps": "12-15", "rest": 60, "required_equipment": ["Dumbbells"]},
+      {"name": "Face Pulls", "sets": 3, "reps": "15-20", "rest": 60, "required_equipment": ["Cable Machine"]}
+    ],
+    "Forearms": [
+      {"name": "Wrist Curls", "sets": 3, "reps": "15-20", "rest": 30, "required_equipment": ["Dumbbells"]},
+      {"name": "Farmer's Carry", "sets": 3, "reps": "30 sec", "rest": 60, "required_equipment": ["Dumbbells"]}
+    ]
+  }
+}

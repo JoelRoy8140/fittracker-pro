@@ -1,0 +1,50 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Secrets & environment ────────────────────────────
+.env
+*.env
+.env.local
+
+# ── SQLite database (contains personal health data) ──
+data/*.db
+data/users.db
+
+# ── Streamlit cache ───────────────────────────────────
+.streamlit/
+streamlit_log.txt
+traceback.txt
+
+# ── OS files ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Misc ─────────────────────────────────────────────
+test_import.py
+create_structure.py
