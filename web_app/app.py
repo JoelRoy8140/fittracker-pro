@@ -1,5 +1,5 @@
 # web_app/app.py
-# Version: 1.0.7 - MediaPipe Path Patch
+# Version: 1.0.8 - MediaPipe Rollback (0.10.11)
 """
 FitTracker Pro – main Streamlit application.
 """
