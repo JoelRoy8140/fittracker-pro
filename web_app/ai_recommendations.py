@@ -18,7 +18,14 @@ import json
 import re
 from typing import Dict, Any, List
 
+import streamlit as st
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+try:
+    if "GEMINI_API_KEY" in st.secrets:
+        GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+except Exception:
+    pass
 
 
 # ─── Gemini helper ────────────────────────────────────────────────────────────
