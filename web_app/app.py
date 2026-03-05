@@ -1,5 +1,5 @@
 # web_app/app.py
-# Version: 1.0.6 - Python 3.13 Fix + Cache Overwrite
+# Version: 1.0.7 - MediaPipe Path Patch
 """
 FitTracker Pro – main Streamlit application.
 """

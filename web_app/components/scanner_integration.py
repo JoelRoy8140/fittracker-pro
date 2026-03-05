@@ -13,23 +13,26 @@ from PIL import Image
 # ─── Lazy MediaPipe loaders ───────────────────────────────────────────────────
 
 def _get_pose():
-    import mediapipe as mp
+    import mediapipe.python.solutions.pose as mp_pose_mod
+    import mediapipe.python.solutions.drawing_utils as mp_drawing
     return (
-        mp.solutions.pose.Pose(static_image_mode=True, model_complexity=1,
-                               min_detection_confidence=0.5),
-        mp.solutions.drawing_utils,
-        mp.solutions.pose,
+        mp_pose_mod.Pose(static_image_mode=True, model_complexity=1,
+                         min_detection_confidence=0.5),
+        mp_drawing,
+        mp_pose_mod,
     )
 
 def _get_face_mesh():
-    import mediapipe as mp
+    import mediapipe.python.solutions.face_mesh as mp_face_mesh_mod
+    import mediapipe.python.solutions.drawing_utils as mp_drawing
+    import mediapipe.python.solutions.drawing_styles as mp_drawing_styles
     return (
-        mp.solutions.face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1,
-                                        refine_landmarks=True,
-                                        min_detection_confidence=0.5),
-        mp.solutions.drawing_utils,
-        mp.solutions.drawing_styles,
-        mp.solutions.face_mesh,
+        mp_face_mesh_mod.FaceMesh(static_image_mode=True, max_num_faces=1,
+                                  refine_landmarks=True,
+                                  min_detection_confidence=0.5),
+        mp_drawing,
+        mp_drawing_styles,
+        mp_face_mesh_mod,
     )
 
 
