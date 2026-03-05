@@ -21,7 +21,7 @@ st.set_page_config(
     page_title="FitTracker Pro",
     page_icon="💪",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="auto",   # collapsed on mobile, expanded on desktop
 )
 
 # ── Imports ───────────────────────────────────────────────────────────────────
@@ -33,7 +33,7 @@ from web_app.components.profile_setup    import profile_setup_component
 from web_app.components.scanner_integration import body_scanner_component
 from web_app.components.workout_planner  import workout_planner_component
 from web_app.components.progress_tracker import progress_tracker_component
-from web_app.components.theme            import inject_css
+from web_app.components.theme            import inject_css, inject_bottom_nav
 from web_app.components.auth             import auth_component
 from web_app.components.reporting        import generate_workout_pdf, generate_progress_pdf
 
@@ -172,6 +172,9 @@ def main():
         "📈 Progress Tracker": progress_page,
     }
     dispatch[page]()
+
+    # ── Android bottom navigation bar (only visible on mobile ≤768px) ────────
+    inject_bottom_nav(page)
 
 
 main()

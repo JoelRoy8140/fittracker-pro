@@ -1,0 +1,25 @@
+{
+  "name": "FitTracker Pro",
+  "short_name": "FitTracker",
+  "description": "AI-Powered Fitness Tracker with Body Scan & Workout Generator",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1a2e",
+  "theme_color": "#6C5CE7",
+  "icons": [
+    {
+      "src": "https://emojicdn.elk.sh/%F0%9F%92%AA?style=google",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://emojicdn.elk.sh/%F0%9F%92%AA?style=google",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "fitness", "lifestyle"]
+}
