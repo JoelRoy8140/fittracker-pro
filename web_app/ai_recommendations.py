@@ -31,12 +31,52 @@ except Exception:
 # ─── Gemini helper ────────────────────────────────────────────────────────────
 
 def _call_gemini(prompt: str) -> str:
-    """Call Gemini and return the raw text response."""
-    import google.generativeai as genai
-    genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel("gemini-1.5-flash")
-    response = model.generate_content(prompt)
-    return response.text
+    """Call Gemini 2.0 Flash and return the raw text response.
+    
+    Uses the newer google-genai SDK (v1beta endpoint) which supports
+    Gemini 2.x models. Retries once on 429 rate-limit errors.
+    """
+    import time
+    
+    def _attempt():
+        try:
+            from google import genai as new_genai
+            client = new_genai.Client(api_key=GEMINI_API_KEY)
+            response = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=prompt,
+            )
+            return response.text
+        except Exception as e:
+            err_str = str(e)
+            if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                raise  # handled outside
+            print(f"[Gemini new SDK] Failed: {e}")
+        
+        # Fallback: legacy google-generativeai SDK
+        import google.generativeai as genai
+        genai.configure(api_key=GEMINI_API_KEY)
+        for model_name in ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-flash-latest", "gemini-pro"]:
+            try:
+                model = genai.GenerativeModel(model_name)
+                response = model.generate_content(prompt)
+                return response.text
+            except Exception as le:
+                if "429" in str(le) or "RESOURCE_EXHAUSTED" in str(le):
+                    raise
+                print(f"[Gemini legacy] model {model_name!r} failed: {le}")
+        
+        raise RuntimeError("All Gemini model attempts failed.")
+    
+    try:
+        return _attempt()
+    except Exception as e:
+        if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+            print("[Gemini] Rate limited, retrying in 10s...")
+            time.sleep(10)
+            return _attempt()
+        raise
+
 
 
 def _extract_json(text: str) -> Any:
