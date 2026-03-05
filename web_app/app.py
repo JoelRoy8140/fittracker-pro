@@ -140,11 +140,23 @@ def main():
         st.caption(f"Goal: {user.get('goal','—')}")
         st.divider()
 
-        page = st.radio("Navigate", [
+        nav_options = [
             "🏠 Dashboard", "👤 Profile Setup",
             "📸 Body Scanner", "🏋️ AI Workout",
             "📈 Progress Tracker"
-        ])
+        ]
+        
+        # Read the programmatic redirect if set
+        default_idx = 0
+        if "nav_route" in st.session_state and st.session_state["nav_route"] in nav_options:
+            default_idx = nav_options.index(st.session_state["nav_route"])
+            
+        page = st.radio("Navigate", nav_options, index=default_idx)
+        
+        # Once we've rendered the sidebar with the hijacked route, clear it
+        # so the user isn't permanently stuck on that page
+        if "nav_route" in st.session_state:
+            del st.session_state["nav_route"]
 
         st.divider()
         if st.button("🚪 Logout", use_container_width=True):

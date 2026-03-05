@@ -142,6 +142,12 @@ def _render_body_ai(body_result, user_data):
     if week:
         st.session_state["last_plan"] = plan
 
+    st.markdown("---")
+    if st.button("🚀 Build Custom AI Plan from Scan", key="btn_body_plan", use_container_width=True):
+        st.session_state["nav_route"] = "🏋️ AI Workout"
+        st.session_state["generate_from_scan"] = True
+        st.rerun()
+
 
 def _render_facial_ai(face_result):
     """Show AI-generated facial exercise plan from face scan metrics."""
@@ -176,6 +182,13 @@ def _render_facial_ai(face_result):
         st.markdown("**💡 Lifestyle Tips:**")
         for t in tips:
             st.markdown(f"- {t}")
+
+    st.markdown("---")
+    if st.button("🚀 Build Custom AI Plan from Scan", key="btn_face_plan", use_container_width=True):
+        st.session_state["nav_route"] = "🏋️ AI Workout"
+        st.session_state["generate_from_scan"] = True
+        st.rerun()
+
 
 
 # ─── Main public component ────────────────────────────────────────────────────

@@ -21,6 +21,15 @@ def workout_planner_component():
 
     st.subheader("🏋️‍♂️ AI Workout Plan Generator")
 
+    # ── Check for Auto-Generate from Scanner ─────────────────────────────────
+    auto_generate = False
+    body_metrics = None
+    if st.session_state.get("generate_from_scan"):
+        auto_generate = True
+        body_metrics = st.session_state.get("last_body_scan")
+        # Consume the flag so it doesn't loop
+        del st.session_state["generate_from_scan"]
+
     # ── Controls ──────────────────────────────────────────────────────────────
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -38,13 +47,25 @@ def workout_planner_component():
             value="Intermediate"
         )
 
-    if st.button("🚀 Generate My Weekly Plan", use_container_width=True):
+    generate_clicked = st.button("🚀 Generate My Weekly Plan", use_container_width=True)
+
+    if generate_clicked or auto_generate:
         with st.spinner("Building your personalised plan…"):
-            plan = generate_workout_plan(
-                user,
-                duration_minutes=duration,
-                split_type=split_type
-            )
+            if auto_generate and body_metrics:
+                st.info("🧠 Using live body scan data for hyper-personalised hyper-generation...")
+                from web_app.ai_recommendations import get_body_workout_recommendation
+                plan = get_body_workout_recommendation(body_metrics, user)
+                # Fallback to general if AI fails totally
+                if not plan or not plan.get("week"):
+                    plan = generate_workout_plan(user, duration_minutes=duration, split_type=split_type)
+            else:
+                # Default behavior
+                plan = generate_workout_plan(
+                    user,
+                    duration_minutes=duration,
+                    split_type=split_type
+                )
+                
             st.session_state["last_plan"] = plan
 
             try:

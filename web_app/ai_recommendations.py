@@ -66,8 +66,9 @@ def get_body_workout_recommendation(
         return _rule_based_body_plan(body_metrics, user_profile)
 
     prompt = f"""
-You are an expert certified personal trainer. Based on the following body scan metrics 
-and user profile, create a highly personalized weekly workout plan.
+You are an elite, professional strength and conditioning coach with access to a massive 
+exercise database (similar to Muscle & Strength). Your job is to generate a HIGHLY dynamic, 
+non-repetitive, and deeply personalized weekly workout plan based on the user's live body scan metrics.
 
 ## User Profile
 - Name: {user_profile.get('name', 'User')}
@@ -77,33 +78,40 @@ and user profile, create a highly personalized weekly workout plan.
 - Activity Level: {user_profile.get('activity_level', 'Beginner')}
 - Available Equipment: {user_profile.get('equipment', ['Bodyweight'])}
 
-## Body Scan Results
+## LIVE Body Scan Results
 - BMI: {body_metrics.get('bmi', 'Unknown')}
 - Body Fat %: {body_metrics.get('body_fat', 'Unknown')}%
 - Shoulder/Hip Ratio: {body_metrics.get('waist_hip_ratio', 'Unknown')}
 
-## Instructions
-Return ONLY a JSON object with this exact structure:
+## Crucial Coaching Mandates:
+1. DO NOT give generic, boring workouts (e.g., just "Pushups" or "Squats"). Use highly specific variations! 
+   (e.g., "Incline Dumbbell Bench Press", "Cable Crossover (Low to High)", "Bulgarian Split Squats", "Decline Barbell Bench Press").
+2. Explicitly tailor the `ai_reasoning` to their EXACT BMI and Body Fat %. Tell them why this routine is scientifically built for their current body composition.
+3. Ensure the workout is physically possible with their `Available Equipment`.
+4. Provide a structured weekly split based on their goal (e.g., Push/Pull/Legs, Upper/Lower, or Bro Split).
+
+Return ONLY a JSON object with this exact structure (no markdown formatting outside the JSON, just the JSON string, but you can use markdown formatting inside the JSON values):
+
 {{
-  "ai_reasoning": "2-3 sentence explanation of why this plan suits the user's metrics",
+  "ai_reasoning": "A 3-sentence deep dive into why this specific protocol matches their {body_metrics.get('bmi', 'BMI')} BMI and {body_metrics.get('body_fat', 'body fat')}% Body Fat.",
   "focus_areas": ["list", "of", "priority", "muscle", "groups"],
-  "split_type": "Full Body | Push/Pull/Legs | Upper/Lower | Bro Split",
+  "split_type": "The exact split name you chose",
   "week": {{
-    "Day Name": {{
-      "focus": "Day focus description",
+    "Day 1: Heavy Push (Chest/Shoulders/Triceps)": {{
+      "focus": "Hypertrophy for anterior chain",
       "exercises": [
         {{
-          "name": "Exercise Name",
-          "sets": 3,
-          "reps": "10-12",
-          "rest": 60,
-          "why": "Brief reason this exercise suits the user"
+          "name": "Incline Dumbbell Bench Press",
+          "sets": 4,
+          "reps": "8-10",
+          "rest": 90,
+          "why": "Why this specific variation is chosen over a flat barbell bench for this user."
         }}
       ]
     }}
   }},
-  "nutrition_tip": "One specific diet tip based on their body composition",
-  "weekly_cardio": "Cardio recommendation"
+  "nutrition_tip": "One highly actionable diet tip mapped to their Body Fat %.",
+  "weekly_cardio": "Exact cardio prescription (e.g., '30 mins LISS post-workout' or 'HIIT 2x a week')."
 }}
 """
 
