@@ -12,6 +12,19 @@ root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if root_path not in sys.path:
     sys.path.insert(0, root_path)
 
+# ── OpenCV Streamlit Cloud Hack ──────────────────────────────────────────────
+# If mediapipe or another lib installs opencv-contrib-python, it breaks on
+# Streamlit Cloud due to missing libglib2.0-0. We catch the ImportError and
+# force-reinstall the headless version.
+try:
+    import cv2
+except ImportError:
+    print("OpenCV import failed. Attempting to force-reinstall headless version...", flush=True)
+    import subprocess
+    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-contrib-python"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "--force-reinstall", "opencv-python-headless"])
+    import cv2  # try again
+
 import streamlit as st
 import pandas as pd
 from datetime import datetime
