@@ -1,0 +1,109 @@
+{
+  "ai_reasoning": "This protocol is tailored to the user's high BMI and body fat percentage, requiring a focus on compound exercises that work multiple muscle groups at once to maximize caloric burn and muscle stimulation. The chosen exercises and split type are designed to optimize hypertrophy and strength gains while also improving overall athleticism and endurance. By targeting the user's specificweaknesses and imbalances, this protocol aims to create a well-rounded and functional physique.",
+  "focus_areas": ["Chest", "Shoulders", "Triceps", "Glutes", "Hamstrings"],
+  "split_type": "Upper/Lower Split with added emphasis on posterior chain development",
+  "week": {
+    "Day 1: Heavy Push (Chest/Shoulders/Triceps)": {
+      "focus": "Hypertrophy for anterior chain",
+      "exercises": [
+        {
+          "name": "Incline Dumbbell Bench Press",
+          "sets": 4,
+          "reps": "8-10",
+          "rest": 90,
+          "why": "The incline dumbbell bench press is chosen to target the upper chest muscles, which are often underdeveloped in individuals with high body fat percentages, and the use of dumbbells allows for a greater range of motion and emphasis on stabilizer muscles."
+        },
+        {
+          "name": "Lateral Raises",
+          "sets": 3,
+          "reps": "12-15",
+          "rest": 60,
+          "why": "Lateral raises are included to target the deltoids and improve overall shoulder development, which is crucial for maintaining proper posture and preventing injuries."
+        },
+        {
+          "name": "Tricep Pushdowns",
+          "sets": 3,
+          "reps": "10-12",
+          "rest": 60,
+          "why": "Tricep pushdowns are chosen to target the triceps and improve overall lockout strength, which is essential for compound exercises like the bench press and incline press."
+        }
+      ]
+    },
+    "Day 2: Heavy Pull (Back/Biceps)": {
+      "focus": "Hypertrophy for posterior chain",
+      "exercises": [
+        {
+          "name": "Deadlifts",
+          "sets": 4,
+          "reps": "8-10",
+          "rest": 120,
+          "why": "Deadlifts are included to target the entire posterior chain, including the back, glutes, and hamstrings, and are essential for building overall strength and athleticism."
+        },
+        {
+          "name": "Bent-Over Barbell Rows",
+          "sets": 3,
+          "reps": "8-10",
+          "rest": 90,
+          "why": "Bent-over barbell rows are chosen to target the upper and middle back muscles, and are a compound exercise that works multiple muscle groups at once."
+        },
+        {
+          "name": "Dumbbell Bicep Curls",
+          "sets": 3,
+          "reps": "12-15",
+          "rest": 60,
+          "why": "Dumbbell bicep curls are included to target the biceps and improve overall arm development, and are a great exercise for building strength and hypertrophy in the upper arm."
+        }
+      ]
+    },
+    "Day 3: Rest",
+    "Day 4: Light Legs (Quads/Calves)": {
+      "focus": "Active recovery and hypertrophy for lower legs",
+      "exercises": [
+        {
+          "name": "Leg Press",
+          "sets": 3,
+          "reps": "10-12",
+          "rest": 90,
+          "why": "The leg press is chosen to target the quadriceps and improve overall leg development, and is a great exercise for building strength and hypertrophy in the lower legs."
+        },
+        {
+          "name": "Standing Calf Raises",
+          "sets": 3,
+          "reps": "12-15",
+          "rest": 60,
+          "why": "Standing calf raises are included to target the calf muscles and improve overall ankle and foot development, and are a great exercise for building strength and hypertrophy in the lower legs."
+        }
+      ]
+    },
+    "Day 5: Active Recovery",
+    "Day 6: Heavy Legs (Glutes/Hamstrings)": {
+      "focus": "Hypertrophy for posterior chain",
+      "exercises": [
+        {
+          "name": "Squats",
+          "sets": 4,
+          "reps": "8-10",
+          "rest": 120,
+          "why": "Squats are included to target the glutes, hamstrings, and quadriceps, and are a compound exercise that works multiple muscle groups at once."
+        },
+        {
+          "name": "Romanian Deadlifts",
+          "sets": 3,
+          "reps": "8-10",
+          "rest": 90,
+          "why": "Romanian deadlifts are chosen to target the hamstrings and glutes, and are a great exercise for building strength and hypertrophy in the posterior chain."
+        },
+        {
+          "name": "Glute Bridges",
+          "sets": 3,
+          "reps": "12-15",
+          "rest": 60,
+          "why": "Glute bridges are included to target the glutes and improve overall hip development, and are a great exercise for building strength and hypertrophy in the posterior chain."
+        }
+      ]
+    },
+    "Day 7: Rest"
+  },
+  "nutrition_tip": "To support muscle growth and recovery, aim to consume 1.6-2.2 grams of protein per kilogram of body weight daily, spread out over 3-5 main meals and 2-3 snacks, and prioritize whole food sources such as lean meats, fish, eggs, dairy, and plant-based options.",
+  "weekly_cardio": "30 minutes of low-intensity steady-state cardio (LISS) post-workout, 2-3 times per week, to improve cardiovascular endurance and enhance fat loss."
+}

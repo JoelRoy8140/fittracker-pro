@@ -21,21 +21,38 @@ from typing import Dict, Any, List
 import streamlit as st
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 try:
     if "GEMINI_API_KEY" in st.secrets:
         GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+    if "GROQ_API_KEY" in st.secrets:
+        GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 except Exception:
     pass
 
 
-# ─── Gemini helper ────────────────────────────────────────────────────────────
+# ─── LLM helper ────────────────────────────────────────────────────────────
 
-def _call_gemini(prompt: str) -> str:
-    """Call Gemini 2.0 Flash and return the raw text response.
-    
-    Uses the newer google-genai SDK (v1beta endpoint) which supports
-    Gemini 2.x models. Retries once on 429 rate-limit errors.
-    """
+def _call_llm(prompt: str) -> str:
+    """Call Groq if available, fallback to Gemini."""
+    if GROQ_API_KEY:
+        try:
+            from groq import Groq
+            client = Groq(api_key=GROQ_API_KEY)
+            response = client.chat.completions.create(
+                messages=[{"role": "user", "content": prompt}],
+                model="llama-3.3-70b-versatile",
+                response_format={"type": "json_object"},
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"[Groq] Failed: {e}")
+            if not GEMINI_API_KEY:
+                raise
+
+    if not GEMINI_API_KEY:
+        raise RuntimeError("No valid API key available for LLM generation.")
+
     import time
     
     def _attempt():
@@ -109,7 +126,7 @@ def get_body_workout_recommendation(
     -------
     dict  — workout plan with 'ai_reasoning' and 'week' structure.
     """
-    if not GEMINI_API_KEY:
+    if not (GEMINI_API_KEY or GROQ_API_KEY):
         return _rule_based_body_plan(body_metrics, user_profile)
 
     prompt = f"""
@@ -155,6 +172,10 @@ Return ONLY a JSON object with this exact structure (no markdown formatting outs
           "why": "Why this specific variation is chosen over a flat barbell bench for this user."
         }}
       ]
+    }},
+    "Day 2: Rest": {{
+      "focus": "Rest and recovery",
+      "exercises": []
     }}
   }},
   "nutrition_tip": "One highly actionable diet tip mapped to their Body Fat %.",
@@ -163,12 +184,12 @@ Return ONLY a JSON object with this exact structure (no markdown formatting outs
 """
 
     try:
-        raw = _call_gemini(prompt)
+        raw = _call_llm(prompt)
         plan = _extract_json(raw)
-        plan["source"] = "gemini"
+        plan["source"] = "llm"
         return plan
     except Exception as e:
-        print(f"[Gemini body] Error: {e}")
+        print(f"[LLM body] Error: {e}")
         fallback = _rule_based_body_plan(body_metrics, user_profile)
         fallback["ai_error"] = str(e)
         return fallback
@@ -189,7 +210,7 @@ def get_facial_exercise_recommendation(face_metrics: Dict[str, Any]) -> Dict[str
     -------
     dict with 'ai_reasoning', 'exercises' list, 'daily_routine', 'lifestyle_tips'
     """
-    if not GEMINI_API_KEY:
+    if not (GEMINI_API_KEY or GROQ_API_KEY):
         return _rule_based_facial_plan(face_metrics)
 
     prompt = f"""
@@ -225,12 +246,12 @@ Recommend 4-6 exercises. Prioritize based on the fat score and ratio.
 """
 
     try:
-        raw = _call_gemini(prompt)
+        raw = _call_llm(prompt)
         plan = _extract_json(raw)
-        plan["source"] = "gemini"
+        plan["source"] = "llm"
         return plan
     except Exception as e:
-        print(f"[Gemini facial] Error: {e}")
+        print(f"[LLM facial] Error: {e}")
         fallback = _rule_based_facial_plan(face_metrics)
         fallback["ai_error"] = str(e)
         return fallback

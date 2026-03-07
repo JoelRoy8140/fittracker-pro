@@ -1,0 +1,106 @@
+{
+  "ai_reasoning": "A 24 BMI and 15% Body Fat indicates a mesomorphic body type with a relatively healthy body composition, allowing for a focus on muscle gain through hypertrophy training. Given this body composition, a routine that targets specific muscle groups with progressive overload is scientifically sound to increase muscle mass while maintaining a lean body fat percentage. The chosen exercises and split are tailored to exploit the user's current body composition, capitalizing on their Active lifestyle and available equipment to drive muscle growth efficiently.",
+  "focus_areas": [
+    "Chest",
+    "Back",
+    "Shoulders",
+    "Arms",
+    "Legs"
+  ],
+  "split_type": "Push/Pull/Legs",
+  "week": {
+    "Day 1: Heavy Push (Chest/Shoulders/Triceps)": {
+      "focus": "Hypertrophy for anterior chain",
+      "exercises": [
+        {
+          "name": "Incline Dumbbell Bench Press",
+          "sets": 4,
+          "reps": "8-10",
+          "rest": 90,
+          "why": "The incline dumbbell bench press is chosen to target the upper chest muscles, which are often underdeveloped, and the use of dumbbells allows for a greater range of motion and emphasis on stabilizer muscles, beneficial for a mesomorphic body type."
+        },
+        {
+          "name": "Dumbbell Lateral Raise",
+          "sets": 3,
+          "reps": "12-15",
+          "rest": 60,
+          "why": "Dumbbell lateral raises effectively target the deltoids, which are crucial for shoulder development and overall posture, and are well-suited for a workout routine focused on muscle gain with available dumbbell equipment."
+        },
+        {
+          "name": "Tricep Dips (Using a Chair or Bench)",
+          "sets": 3,
+          "reps": "10-12",
+          "rest": 60,
+          "why": "Tricep dips are an effective bodyweight exercise that can be modified using a chair or bench, targeting the triceps without the need for specific gym equipment, making it accessible and beneficial for the user."
+        }
+      ]
+    },
+    "Day 2: Rest": {
+      "focus": "Rest and recovery",
+      "exercises": []
+    },
+    "Day 3: Pull (Back/Biceps)": {
+      "focus": "Hypertrophy for posterior chain",
+      "exercises": [
+        {
+          "name": "Dumbbell Bent Over Row",
+          "sets": 4,
+          "reps": "8-10",
+          "rest": 90,
+          "why": "The dumbbell bent over row is a compound exercise that effectively targets the back muscles, including the latissimus dorsi and trapezius, and is suitable for a workout routine utilizing dumbbells."
+        },
+        {
+          "name": "Dumbbell Hammer Curl",
+          "sets": 3,
+          "reps": "10-12",
+          "rest": 60,
+          "why": "Dumbbell hammer curls are chosen to target the biceps from a different angle, emphasizing the development of the outer biceps and providing a well-rounded arm workout."
+        },
+        {
+          "name": "Bodyweight Superman",
+          "sets": 3,
+          "reps": "12-15",
+          "rest": 60,
+          "why": "The bodyweight superman exercise targets the erector spinae and other stabilizer muscles in the back, improving posture and overall back strength without the need for specialized equipment."
+        }
+      ]
+    },
+    "Day 4: Rest": {
+      "focus": "Rest and recovery",
+      "exercises": []
+    },
+    "Day 5: Legs": {
+      "focus": "Hypertrophy for lower body",
+      "exercises": [
+        {
+          "name": "Bulgarian Split Squats (Using Bodyweight or Dumbbells)",
+          "sets": 4,
+          "reps": "8-10",
+          "rest": 90,
+          "why": "Bulgarian split squats are a highly effective exercise for targeting the quadriceps, hamstrings, and glutes, and can be adapted to use bodyweight or dumbbells, making it accessible and beneficial for the user's available equipment."
+        },
+        {
+          "name": "Dumbbell Step Ups",
+          "sets": 3,
+          "reps": "10-12",
+          "rest": 60,
+          "why": "Dumbbell step ups target the legs, particularly the quadriceps and hip flexors, and are an excellent exercise for improving strength and mobility in a home or limited equipment setting."
+        },
+        {
+          "name": "Bodyweight Calf Raises",
+          "sets": 3,
+          "reps": "12-15",
+          "rest": 60,
+          "why": "Bodyweight calf raises are a simple yet effective exercise for targeting the calf muscles, which are important for ankle stability and overall lower leg development, and require no equipment."
+        }
+      ]
+    },
+    "Day 6 and 7: Rest": {
+      "focus": "Extended rest and recovery",
+      "exercises": []
+    }
+  },
+  "nutrition_tip": "To support muscle gain and maintain a lean body fat percentage of 15%, focus on consuming a calorie-surplus diet with a balance of protein (1.6-2.2 grams per kilogram of body weight), complex carbohydrates, and healthy fats, ensuring that each meal is spaced out to support muscle recovery and growth.",
+  "weekly_cardio": "30 minutes of Low-Intensity Steady State (LISS) cardio, such as walking or light jogging, performed 2-3 times a week post-workout to enhance fat loss and improve cardiovascular health without interfering with muscle gain.",
+  "source": "llm"
+}
