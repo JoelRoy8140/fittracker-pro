@@ -23,6 +23,10 @@ except ImportError:
     import subprocess
     subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-contrib-python"], check=False)
     subprocess.run([sys.executable, "-m", "pip", "install", "--force-reinstall", "opencv-python-headless"], check=False)
+    if "cv2" in sys.modules:
+        del sys.modules["cv2"]
+    import importlib
+    importlib.invalidate_caches()
     import cv2  # try again
 
 import streamlit as st
