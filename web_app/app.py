@@ -21,8 +21,8 @@ try:
 except ImportError:
     print("OpenCV import failed. Attempting to force-reinstall headless version...", flush=True)
     import subprocess
-    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-contrib-python"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "--force-reinstall", "opencv-python-headless"])
+    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-contrib-python"], check=False)
+    subprocess.run([sys.executable, "-m", "pip", "install", "--force-reinstall", "opencv-python-headless"], check=False)
     import cv2  # try again
 
 import streamlit as st
